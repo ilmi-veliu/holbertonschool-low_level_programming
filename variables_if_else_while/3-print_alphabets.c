@@ -20,6 +20,6 @@ char alphabet_deux = 'A';
 		putchar(alphabet_deux);
 		alphabet_deux++;
 	}
-	putchar('n');
+	putchar('\n');
 	return (0);
 }
