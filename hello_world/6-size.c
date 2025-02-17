@@ -10,6 +10,6 @@ int main(void)
 	printf("the size of int is: %lu byte(s)\n", sizeof(int));
 	printf("the size of long int is: %lu byte(s)\n", sizeof(long int));
 	printf("the size of long long int is: %lu byte(s)\n", sizeof(long long int));
-	printf("the size of float  is :%lu byte(s)\n", sizeof(float));
+	printf("the size of float is:%lu byte(s)\n", sizeof(float));
 	return (0);
 }
