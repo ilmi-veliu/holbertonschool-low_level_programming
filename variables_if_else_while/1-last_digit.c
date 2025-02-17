@@ -1,25 +1,31 @@
-#include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-
+#include <time.h>
+#include <stdio.h>
+/**
+ * main - Prints a programming quote
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int n;
-int panda;
-srand(time(NULL));
+	int n;
+	int x;
 
+	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	panda = n %10;
+	x = n % 10;
 
-	printf("the last digit of %d is %d", n , panda);
-
-	if (panda > 5)
-		printf("the last digit of %d is %d and is 0\n",n , panda);
-
-	if (panda == 0)
-		 printf("and is 0\n");
-
-	if (panda <6)
-		printf("and is less than 6 and not 0\n");
+	if (x > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n", n, x);
+	}
+	else if (x == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, x);
+	}
+	else
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, x);
+	}
 	return (0);
 }
