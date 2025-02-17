@@ -14,12 +14,12 @@ char alphabet_deux = 'A';
 		alphabet++;
 
 	}
-	putchar('\n');
 
 	while (alphabet_deux <= 'Z')
 	{
 		putchar(alphabet_deux);
 		alphabet_deux++;
 	}
+	putchar('n');
 	return (0);
 }
