@@ -18,5 +18,6 @@ int main(void)
 		}
 		number++;
 	}
+	putchar('\n');
 	return (0);
 }
