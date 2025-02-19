@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _abs - te
- * @r: L'entier à traiter
+ * print_last_digit - Affiche le dernier chiffre d'un nombre
+ * @nbr: Le nombre à traiter
  *
- * Return: tkt
+ * Return: Le dernier chiffre
  */
 int print_last_digit(int nbr)
 {
