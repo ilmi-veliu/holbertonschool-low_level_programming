@@ -7,10 +7,9 @@
  */
 int _abs(int r)
 {
-	int valeur_absolut;
+	if (r < 0)
+	return (-r);
 
-	valeur_absolut = abs(r);
-	_putchar(valeur_absolut + '0');
-
-	return (valeur_absolut);
+	else
+	return (r);
 }
