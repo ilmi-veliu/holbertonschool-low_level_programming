@@ -1,26 +1,19 @@
 #include "main.h"
+
 /**
- * more_numbers - Affiche les nombres de 0 à 14, 10 fois
+ * more_numbers - Affiche les chiffres de 0 à 14, 10 fois
  */
 void more_numbers(void)
 {
-	int a;
-	int b;
+	int i, j;
 
-	for (a = 0 ; a <= 10 ; a++)
+	for (j = 0; j < 10; j++)
 	{
-		for  (b = 0 ; b <= 14 ; b++)
+		for (i = 0; i <= 14; i++)
 		{
-			if (b <= 9)
-			{
-				_putchar(b + '0');
-			}
-
-			else
-			{
-				_putchar('0' + ( b /10));
-				_putchar('0' + (b % 10));
-			}
+			if (i >= 10)
+				_putchar((i / 10) + '0');
+			_putchar((i % 10) + '0');
 		}
 	_putchar('\n');
 	}
