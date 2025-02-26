@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+ * puts2 - Affiche chaque 2ème caractère d'une chaîne
+ * @str: Chaîne à afficher
+ */
 void puts2(char *str)
 {
 	int i = 0;
