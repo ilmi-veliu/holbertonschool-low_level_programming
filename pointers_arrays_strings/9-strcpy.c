@@ -10,9 +10,6 @@ char *_strcpy(char *dest, char *src)
 {
 	char *pvd = dest;
 
-	if (str == NULL && dest == NULL)
-		return (NULL);
-
 	while (*src)
 	{
 		*dest = *src;
