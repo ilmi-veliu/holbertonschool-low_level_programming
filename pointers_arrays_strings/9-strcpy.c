@@ -8,8 +8,6 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *pvd = dest;
-
 	while (*src)
 	{
 		*dest = *src;
@@ -18,5 +16,5 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	}
 	dest = '\0';
-	return (pvd);
+	return (dest);
 }
