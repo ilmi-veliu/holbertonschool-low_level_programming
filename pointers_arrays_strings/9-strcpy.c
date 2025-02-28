@@ -1,6 +1,8 @@
 #include "main.h"
 char *_strcpy(char *dest, char *src)
 {
+	char *pvd = dest;
+
 	while (*src)
 	{
 		*dest = *src;
@@ -8,5 +10,5 @@ char *_strcpy(char *dest, char *src)
 		dest++;
 		src++;
 	}
-	return (dest);
+	return (pvd);
 }
