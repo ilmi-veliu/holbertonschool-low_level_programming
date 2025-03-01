@@ -6,21 +6,24 @@
  * Return: The integer value of the string.
  */
 int _atoi(char *s)
-{
-	int sign = 1, result = 0;
-
-	while (*s)
 	{
-		if (*s == '-')
-			sign *= -1;
-		else if (*s >= '0' && *s <= '9')
-	{
-		result = result * 10 + (*s - '0');
+		int i = 0;
+		int sign = 1;
+		int result = 0;
 
-		if (*(s + 1) < '0' || *(s + 1) > '9')
-			break;
-	}
-	s++;
-	}
-return (result * sign);
+		while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
+		{
+			if (s[i] == '-')
+				sign *= -1;
+					i++;
+		}
+
+		while (s[i] >= '0' && s[i] <= '9')
+		{
+			if (result > (2147483647 - (s[i] - '0')) / 10)
+			return (sign == 1 ? 2147483647 : -2147483648);
+			result = result * 10 + (s[i] - '0');
+			i++;
+		}
+return (result *sign);
 }
