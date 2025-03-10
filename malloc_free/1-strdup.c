@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _strdup - Crée une copie de la chaîne `str`
+ * @str: La chaîne à dupliquer
+ *
+ * Return: Un pointeur vers la copie ou NULL en cas d'échec
+ */
 char *_strdup(char *str)
 {
 	int i;
@@ -19,5 +25,6 @@ char *_strdup(char *str)
 		dup[d] = str[d];
 	}
 
+	dup = '\0';
 	return (dup);
 }
