@@ -10,8 +10,8 @@
  */
 int **alloc_grid(int width, int height)
 {
-int **tab2;
-int i, j;
+	int **tab2;
+	int i, j;
 
 	if (width <= 0 || height <= 0)
 	return (NULL);
@@ -27,7 +27,9 @@ int i, j;
 		if (tab2[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
+			{
 				free(tab2[j]);
+			}
 				free(tab2);
 				return (NULL);
 		}
@@ -40,5 +42,6 @@ int i, j;
 			tab2[i][j] = 0;
 		}
 	}
+
 return (tab2);
 }
