@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * alloc_grid - Alloue un tableau 2D de dimensions width x height.
  * @width: Nombre de colonnes.
@@ -9,17 +10,25 @@
 int **alloc_grid(int width, int height)
 {
 	int **tab2;
-	int i;
-	int j = 0;
+	int i, j = 0;
 
 	if (width <= 0 || height <= 0)
 	return (NULL);
 
 	tab2 = malloc(height * sizeof(int *));
+	if (tab2 == NULL)
+	return (NULL);
 
 	for (i = 0; i < height; i++)
 	{
 		tab2[i] = malloc(width * sizeof(int));
+		if (tab2[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+			free(tab2[j]);
+			free(tab2);
+			return (NULL);
+		}
 	}
 
 	for (i = 0; i < height; i++)
@@ -29,6 +38,13 @@ int **alloc_grid(int width, int height)
 			tab2[i][j] = 0;
 		}
 	}
+
+	for (i = 0; i < height; i++)
+	{
+		free(tab2[i]);
+	}
+
+	free(tab2);
 
 	return (tab2);
 }
