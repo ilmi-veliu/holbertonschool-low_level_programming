@@ -13,33 +13,32 @@ int **alloc_grid(int width, int height)
 int **tab2;
 int i, j;
 
-if (width <= 0 || height <= 0)
-return (NULL);
+	if (width <= 0 || height <= 0)
+	return (NULL);
 
-tab2 = malloc(height * sizeof(int *));
-if (tab2 == NULL)
-return (NULL);
+	tab2 = malloc(height * sizeof(int *));
 
-for (i = 0; i < height; i++)
-{
-tab2[i] = malloc(width * sizeof(int));
-if (tab2[i] == NULL)
-{
-for (j = 0; j < i; j++)
-free(tab2[j]);
-free(tab2);
-return (NULL);
-}
-}
+	if (tab2 == NULL)
+	return (NULL);
 
-/* Initialisation du tableau à 0 */
-for (i = 0; i < height; i++)
-{
-for (j = 0; j < width; j++)
-{
-tab2[i][j] = 0;
-}
-}
+	for (i = 0; i < height; i++)
+	{
+		tab2[i] = malloc(width * sizeof(int));
+		if (tab2[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+				free(tab2[j]);
+				free(tab2);
+				return (NULL);
+		}
+	}
 
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			tab2[i][j] = 0;
+		}
+	}
 return (tab2);
 }
