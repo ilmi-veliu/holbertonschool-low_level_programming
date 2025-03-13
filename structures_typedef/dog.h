@@ -6,5 +6,5 @@ typedef struct
 	char *name;
 	float *age;
 	char *owner;
-} dog;
+} dog_t;
 #endif
