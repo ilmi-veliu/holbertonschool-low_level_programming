@@ -1,5 +1,20 @@
 #include "main.h"
 /**
+ * _strlen - Returns the length of a string
+ * @s: The string to measure
+ *
+ * Return: The length of the string
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	;
+
+	return (i);
+}
+/**
  * _strdup - Crée une copie de la chaîne `str`
  * @str: La chaîne à dupliquer
  *
@@ -7,24 +22,24 @@
  */
 char *_strdup(char *str)
 {
-	int i = 0;
-	char *dup;
-	int d;
+	char *cpy;
+	unsigned int i;
 
-	while (str[i] != '\0')
+	if (str == NULL)
 	{
-		i++;
-	}
-
-	dup = malloc((i + 1) * sizeof(char));
-
-	if (dup == NULL)
 		return (NULL);
-	for (d = 0; d <= i ; d++)
-	{
-		dup[d] = str[d];
 	}
+	cpy = malloc(_strlen(str) + 1);
+	if (cpy == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		cpy[i] = str[i];
 
-	dup[i] = '\0';
-	return (dup);
+	}
+	cpy[i] = '\0';
+
+	return (cpy);
 }
