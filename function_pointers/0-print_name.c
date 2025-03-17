@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * print_name - Imprime un nom en utilisant une fonction donnée
  * @name: Pointeur vers le nom à imprime
