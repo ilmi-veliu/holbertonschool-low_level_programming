@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- * int_index - Recherche un entier dans un tableau
- * @array: Tableau d'entiers.
- * @size: Nombre d'éléments dans le tableau.
- * @cmp: Pointeur vers la fonction de comparaison.
- * Return: Index du premier élément pour lequel cmp ne retourne pas 0,
- * ou -1 si aucun élément ne correspond ou si les paramè
+ * int_index - Cherche un entier dans un tableau
+ * @array: Tableau d'entiers
+ * @size: Nombre d'éléments
+ * @cmp: Fonction de comparaison
+ *
+ * Return: Index du premier match ou -1 si aucun
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
