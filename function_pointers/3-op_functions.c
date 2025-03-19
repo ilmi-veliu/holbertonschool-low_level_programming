@@ -11,9 +11,8 @@
  */
 int op_add(int a, int b)
 {
-    return (a + b);
+	return (a + b);
 }
-
 /**
  * op_sub - Returns the difference of two numbers
  * @a: First integer
@@ -23,9 +22,8 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-    return (a - b);
+	return (a - b);
 }
-
 /**
  * op_mul - Returns the product of two numbers
  * @a: First integer
@@ -35,7 +33,7 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
-    return (a * b);
+	return (a * b);
 }
 
 /**
@@ -44,32 +42,31 @@ int op_mul(int a, int b)
  * @b: Second integer
  *
  * Return: Result of a / b
- *         Exits with error if b == 0
+ * Exits with error if b == 0
  */
 int op_div(int a, int b)
 {
-    if (b == 0)
-    {
-        printf("Error\n");
-        exit(100);
-    }
-    return (a / b);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a / b);
 }
-
 /**
  * op_mod - Returns the remainder of division
  * @a: First integer
  * @b: Second integer
  *
  * Return: Remainder of a % b
- *         Exits with error if b == 0
+ * Exits with error if b == 0
  */
 int op_mod(int a, int b)
 {
-    if (b == 0)
-    {
-        printf("Error\n");
-        exit(100);
-    }
-    return (a % b);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
