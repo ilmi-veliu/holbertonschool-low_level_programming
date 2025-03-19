@@ -1,1 +1,1 @@
-ffff
+funtion pointer
