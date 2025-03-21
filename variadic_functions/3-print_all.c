@@ -45,22 +45,27 @@ void print_string(va_list args)
 /**
  * print_all - Imprime différents types d'arguments selon un format donné
  * @format: Liste des types d'arguments passés à la fonction
- * 
- * Description: La fonction prend en entrée une chaîne `format` et un nombre variable d'arguments.
- *             Elle affiche chaque argument correspondant au type spécifié dans `format` :
- *             - 'c' : caractère
- *             - 'i' : entier
- *             - 'f' : float
- *             - 's' : chaîne de caractères
- * 
- *             Si un argument de type chaîne de caractères est `NULL`, "(nil)" est affiché à la place.
- *             La fonction imprime tous les arguments séparés par une virgule et termine par une nouvelle ligne.
+ *
+ * Description: La fonction prend en entrée une chaîne `format` et un nombre
+ * variable d'arguments. Elle affiche chaque argument correspondant au type
+ * spécifié dans `format` :
+ * - 'c' : caractère
+ * - 'i' : entier
+ * - 'f' : float
+ * - 's' : chaîne de caractères
+ *
+ * Si un argument de type chaîne de caractères est `NULL`, "(nil)"
+ * à la place. La fonction imprime tous les arguments séparés par ,
+ * et termine par une nouvelle ligne.
  */
 void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0, j;
-	void (*funcs[4])(va_list) = {print_char, print_int, print_float, print_string};
+	void (*funcs[4])(va_list) = {
+		print_char, print_int, print_float,
+		print_string
+	};
 	char types[4] = {'c', 'i', 'f', 's'};
 	char *sep = "";
 
