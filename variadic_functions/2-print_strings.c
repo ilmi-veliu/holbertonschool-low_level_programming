@@ -3,7 +3,7 @@
  * print_strings - Prints strings with a separator.
  * @separator: String separator.
  * @n: Number of strings.
- */
+ */	
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
